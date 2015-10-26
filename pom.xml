@@ -29,13 +29,13 @@
     <dependency>
 	<groupId>ru.tehkode</groupId>
 	<artifactId>PermissionsEx</artifactId>
-	<version>1.21-SNAPSHOT</version>
+	<version>1.23.2-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <repositories>
 	<repository>
             <id>pex-repo</id>
-            <url>http://pex-repo.zachsthings.com</url>
+            <url>http://pex-repo.aoeu.xyz/</url>
         </repository>
     </repositories>
 </project>
