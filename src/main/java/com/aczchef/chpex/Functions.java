@@ -27,6 +27,8 @@ import ru.tehkode.permissions.PermissionManager;
 import ru.tehkode.permissions.PermissionUser;
 import ru.tehkode.permissions.bukkit.PermissionsEx;
 
+import java.util.Set;
+
 /**
  *
  * @author cgallarno
