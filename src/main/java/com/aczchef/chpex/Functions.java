@@ -18,10 +18,10 @@ import com.laytonsmith.core.constructs.Construct;
 import com.laytonsmith.core.constructs.Target;
 import com.laytonsmith.core.environments.CommandHelperEnvironment;
 import com.laytonsmith.core.environments.Environment;
+import com.laytonsmith.core.exceptions.CRE.CREInvalidPluginException;
+import com.laytonsmith.core.exceptions.CRE.CREThrowable;
 import com.laytonsmith.core.exceptions.ConfigRuntimeException;
 import com.laytonsmith.core.functions.AbstractFunction;
-import com.laytonsmith.core.functions.Exceptions;
-import java.util.Set;
 import ru.tehkode.permissions.PermissionGroup;
 import ru.tehkode.permissions.PermissionManager;
 import ru.tehkode.permissions.PermissionUser;
@@ -58,13 +58,13 @@ public class Functions {
 	    Set<PermissionUser> users = pex.getUsers(g);
 
 	    for (PermissionUser user : users) {
-		cusers.push(new CString(user.getName(), t));
+		cusers.push(new CString(user.getName(), t), t);
 	    }
 	    return cusers;
 	}
 
-	public Exceptions.ExceptionType[] thrown() {
-	    return new Exceptions.ExceptionType[]{Exceptions.ExceptionType.InvalidPluginException};
+	public Class<? extends CREThrowable>[] thrown() {
+		return new Class[]{CREInvalidPluginException.class};
 	}
 
 	public boolean isRestricted() {
@@ -110,8 +110,8 @@ public class Functions {
 	    return false;
 	}
 
-	public Exceptions.ExceptionType[] thrown() {
-	    return new Exceptions.ExceptionType[]{Exceptions.ExceptionType.InvalidPluginException};
+	public Class<? extends CREThrowable>[] thrown() {
+		return new Class[]{CREInvalidPluginException.class};
 	}
 
 	public String docs() {
@@ -135,8 +135,8 @@ public class Functions {
     @api
     public static class pex_get_user_info extends AbstractFunction {
 
-	public Exceptions.ExceptionType[] thrown() {
-	    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	public Class<? extends CREThrowable>[] thrown() {
+		return new Class[]{CREInvalidPluginException.class};
 	}
 
 	public boolean isRestricted() {

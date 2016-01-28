@@ -4,11 +4,8 @@
 
   <groupId>com.brothercraft</groupId>
   <artifactId>CHPex</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
+  <version>1.1.1</version>
   <name>CHPex</name>
-  <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,18 +21,18 @@
     <dependency>
       <groupId>com.sk89q</groupId>
       <artifactId>commandhelper</artifactId>
-      <version>3.3.1-SNAPSHOT</version>
+      <version>3.3.2-SNAPSHOT</version>
     </dependency>
     <dependency>
-	<groupId>ru.tehkode</groupId>
-	<artifactId>PermissionsEx</artifactId>
-	<version>1.23.2-SNAPSHOT</version>
+      <groupId>ru.tehkode</groupId>
+      <artifactId>PermissionsEx</artifactId>
+      <version>1.23.2-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <repositories>
-	<repository>
-            <id>pex-repo</id>
-            <url>http://pex-repo.aoeu.xyz/</url>
-        </repository>
-    </repositories>
+    <repository>
+      <id>pex-repo</id>
+      <url>https://pex-repo.aoeu.xyz/</url>
+    </repository>
+  </repositories>
 </project>
