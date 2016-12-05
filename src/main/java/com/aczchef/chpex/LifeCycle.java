@@ -12,22 +12,21 @@ public class LifeCycle extends AbstractExtension {
 
     @Override
     public void onStartup() {
-	try {
-	    Static.checkPlugin("PermissionsEx", Target.UNKNOWN);
-	} catch (Exception e) {
-	    System.out.println("[CommandHelper] CHPex Could not find PermissionsEx please make sure you have it installed.");
-	}
-	System.out.println("[CommandHelper] CHPex Initialized - ACzChef");
+        try {
+            Static.checkPlugin("PermissionsEx", Target.UNKNOWN);
+        } catch (Exception e) {
+            System.out.println("[CommandHelper] CHPex Could not find PermissionsEx please make sure you have it installed.");
+        }
+        System.out.println("[CommandHelper] CHPex " + getVersion() + " Initialized - ACzChef");
     }
 
     @Override
     public void onShutdown() {
-	System.out.println("[CommandHelper] CHPex De-Initialized - ACzChef");
+        System.out.println("[CommandHelper] CHPex De-Initialized - ACzChef");
     }
-    
-    
+
 
     public Version getVersion() {
-	return new SimpleVersion(1, 1, 1);
+        return new SimpleVersion(1, 2, 0);
     }
 }
